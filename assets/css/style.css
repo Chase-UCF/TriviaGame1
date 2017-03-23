@@ -1,0 +1,29 @@
+#start {
+	width: 450px;
+	height: 150px;
+	font-size: 48px;
+	background-color: black;
+	color: #00FFFF;
+	margin-left: 600px;
+}
+h1{
+	height: 100px;
+	width: 500px;
+	background-color: black;
+	color: #00FFFF;
+	/*margin-left: 600px;*/
+	text-align: center;
+	font-size: 50px;
+}
+#main, #results{
+	height: 500px;
+	width: 500px;
+	background-color: black;
+	color: #00FFFF;
+	/*margin-left: 600px;*/
+	text-align: center;
+	padding-top: 50px; 
+}
+#time {
+	font-size: 36px;
+}
