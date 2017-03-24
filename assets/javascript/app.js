@@ -11,11 +11,9 @@ $(function() {
 });
 
 var clock = {
-    time: 10,
+    time: 90,
 
     start: function() {
-
-
         intervalId = setInterval(function() {
             clock.time--;
             var converted = clock.timeConverter(clock.time);
@@ -24,6 +22,7 @@ var clock = {
             if (clock.time == 0) {
                 $("#results").toggle();
                 $("#main").toggle();
+                clearInterval(intervalId);
             };
         }, 1000);
     },
@@ -45,8 +44,16 @@ var clock = {
         }
 
         return minutes + ":" + seconds;
+        
     },
-
-
-
 };
+
+$(function() {
+    
+    $("#reset-button").on("click", function() {
+        $("#results").toggle();
+        $("#start-button").toggle();
+        clock.time = 10;
+        $('#time').html(clock.timeConverter(90));
+    });
+});
